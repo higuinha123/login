@@ -1,0 +1,401 @@
+
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+ 
+ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #21D4FD, #8721FF);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    margin: 0;
+}
+ 
+
+header {
+    width: 100%;
+    padding: 16px 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.logo-box {
+    display: flex;
+    align-items: center;
+}
+ 
+.logo {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+ 
+.logo:hover {
+    transform: scale(1.05);
+}
+ 
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+ 
+.parent-link {
+    display: flex;
+    gap: 1.5rem;
+}
+ 
+.social-links {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+ 
+.social-links:hover {
+    color: #21D4FD;
+}
+ 
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+ 
+.social-icon img {
+    width: 25px;
+    height: 25px;
+    transition: opacity 0.3s ease;
+}
+ 
+.social-icon:hover img {
+    opacity: 0.8;
+}
+ 
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    width: 100%;
+}
+ 
+.sub-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 13px 27px rgba(50, 50, 93, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+ 
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+ 
+label {
+    font-weight: 500;
+    opacity: 0.85;
+    margin-bottom: 5px;
+    width: 100%;
+    display: block;
+}
+ 
+
+input {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 24px;
+    margin-top: 8px;
+    border-radius: 50px;
+    border: 2px solid #ddd;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: 16px;
+}
+ 
+input:focus {
+    background-color: #f1f1f1;
+    border-color: #21D4FD;
+    outline: none;
+}
+ 
+
+button, .custom-link, .voltar {
+    padding: 12px 48px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: 100%;
+}
+ 
+button {
+    background-color: #1A1B27;
+}
+ 
+button:hover {
+    background-color: #2A2B37;
+}
+ 
+.custom-link {
+    background-color: #333;
+    margin-top: 1rem;
+    display: inline-block;
+}
+ 
+.custom-link:hover {
+    background-color: #21D4FD;
+    transform: scale(1.05);
+}
+ 
+.voltar {
+    margin-top: 1rem;
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 2px solid #007bff;
+    font-weight: 600;
+}
+ 
+.voltar:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+    transform: translateY(-5px);
+}
+ 
+.voltar:disabled {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+ 
+.no-account {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 1rem;
+}
+ 
+.no-account a {
+    color: #21D4FD;
+    text-decoration: none;
+}
+ 
+.no-account a:hover {
+    opacity: 0.8;
+}
+ 
+ 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+ 
+    .parent-link {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+ 
+    .logo {
+        margin-bottom: 10px;
+    }
+ 
+    .sub-form {
+        padding: 1.5rem;
+        max-width: 350px;
+    }
+ 
+    .button-form {
+        width: 100%;
+    }
+ 
+    .social-icons {
+        gap: 10px;
+    }
+}
+ 
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+}
+ 
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+ 
+.footer-links,
+.footer-social,
+.footer-contact {
+    width: 100%;
+    max-width: 320px;
+}
+ 
+.footer-links h3,
+.footer-social h3,
+.footer-contact h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+}
+ 
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+.footer-links li,
+.footer-social li {
+    margin: 12px 0;
+}
+ 
+.footer-links a,
+.footer-social a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+ 
+.footer-links a:hover,
+.footer-social a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+ 
+.footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+}
+ 
+.social-icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+ 
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+ 
+.footer-contact a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+ 
+.footer-contact a:hover {
+    color: white;
+}
+ 
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 20px;
+}
+ 
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+ 
+ 
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .footer-links,
+    .footer-social,
+    .footer-contact {
+        max-width: 100%;
+        text-align: center;
+    }
+ 
+    .footer-social a {
+        margin-bottom: 10px;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 20px 10px;
+    }
+ 
+    .footer-links h3,
+    .footer-social h3,
+    .footer-contact h3 {
+        font-size: 18px;
+    }
+ 
+    .footer-links a,
+    .footer-social a {
+        font-size: 14px;
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    width: 100%;
+    margin-top: 300px;  
+}
+ 
